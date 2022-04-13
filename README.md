@@ -71,7 +71,7 @@ Before taking any coding and architecture decisions, I first  come up with an id
 - Two screens with functionality to navigate between themselves.
 - Layouts should be rendered in less than 60 frames per second which means leveraging on constraint layouts
 - An architecture which will ensure separation of concerns. Preventing memory leaks, threading issues while also testable and scalable
-- A form of storage which will serve as a single source of  truth, since when collections are liked  or unliked, they should reflect in both screens.
+- A form of storage which will serve as a single source of  truth, since when collections are liked  or unliked, they should reflect in both screens. This will be discussed later on.
 
 ## Architecture
 
@@ -82,3 +82,18 @@ It enforces separation of concerns and dependency inversion, where higher and lo
 - Presentation
 
 ### Data Layer
+The data layer contains application data and business logic. The business logic is what gives value to your app—it's made of real-world business rules that determine how application data must be created, stored, and changed.
+
+###Remote layer
+The remote later relies on Retrofit library to fetch data from cookpad API.  The remote layer contains its own data class called collectionDTO which maps to different data classes within out application. Here I added` @Transient var isLiked: Boolean = false` to the enity clas since I needed to monitor if a collection is liked or not.
+
+### Cache Layer
+In android the could persist data in several ways;
+- shared preference: SharedPreferences is a key/value store where you can save a data under certain key. I made the desision not to store data with shared preference because it is made for store private primitive data types: booleans, floats, ints, longs, and strings, not arrays or complex objects
+
+
+
+
+
+
+We have two data sources - `Remote` and `Cache`. Remote relies on Retrofit library to fetch data from the swapi.dev REST api, while the cache layer uses Room library to persist the search history.
