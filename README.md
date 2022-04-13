@@ -30,9 +30,10 @@ Thanks for checking out my project. For the rest of this document, I will be exp
 <img src="https://user-images.githubusercontent.com/61085272/163265305-f9ca1ec0-508b-43dc-8960-3978d9dceba6.png" width="33%" /> <img src="https://user-images.githubusercontent.com/61085272/163265317-7b8fc1e2-6d07-48e1-b70b-b6bada74487a.png" width="33%" /> 
 
 
+<img src="https://user-images.githubusercontent.com/61085272/163267998-c4710d0c-86e4-49d8-bd6c-334d71eb5d08.png" width="33%" /> <img src="https://user-images.githubusercontent.com/61085272/163268011-1700510f-a05a-4ce8-9ecf-e2573a289bbf.png" width="33%" /> 
+
 
 ## Feature
-
 
 #### Collections List Feature
 
