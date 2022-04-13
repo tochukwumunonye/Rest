@@ -6,7 +6,7 @@
 * Clean Architecture with MVI (Uni-directional data flow)
 
 
-Hi 👋🏼👋🏼👋🏼Before taking any coding and architecture decisions, I first had to come up with an idea of how I wanted the app to look, and the kind of experience I wanted users to have when using the app. This also guided my decisions on what tools were best suited to bring about a good user experience. Some decisions required for the features were:
+Hi 👋🏼👋🏼👋🏼
 Thanks for checking out my project. For the rest of this document, I will be explaining the reasons for the technical decisions I made for this case study, the problems I faced, and what I learnt from them.
 
 ## Table of content
@@ -14,7 +14,7 @@ Thanks for checking out my project. For the rest of this document, I will be exp
 - [Prerequisite](#prerequisite)
 - [Preview](#preview)
 - [Feature](#feature)
-- [Design](#design and thought process)
+- [Design](#design)
 - [Architecture](#architecture)
 - [Testing](#testing)
 - [Recommendation](#Libraries)
@@ -67,3 +67,8 @@ Then the recipe collection is be removed from the favorite list
 
 
 ## Design and Thought Process
+Before taking any coding and architecture decisions, I first  come up with an idea of how I wanted the app to look, and the kind of experience I wanted users to have when using the app. This also guided my decisions on what tools were best suited to bring about a good user experience. Some decisions required for the features were:
+- Two screens with functionality to navigate between themselves.
+- Layouts should be rendered in less than 60 frames per second which means leveraging on constraint layouts
+- An architecture which will ensure separation of concerns. Preventing memory leaks, threading issues while also testable and scalable
+- A form of storage which will serve as a single source of  truth, since when collections are liked  or unliked, they should reflect in both screens.
