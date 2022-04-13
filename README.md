@@ -72,3 +72,13 @@ Before taking any coding and architecture decisions, I first  come up with an id
 - Layouts should be rendered in less than 60 frames per second which means leveraging on constraint layouts
 - An architecture which will ensure separation of concerns. Preventing memory leaks, threading issues while also testable and scalable
 - A form of storage which will serve as a single source of  truth, since when collections are liked  or unliked, they should reflect in both screens.
+
+## Architecture
+
+The application follows clean architecture because of the benefits it brings to software which includes scalability, maintainability and testability.
+It enforces separation of concerns and dependency inversion, where higher and lower level layers all depend on abstractions. In the project, the layers are separated into different layers namely:
+
+- Data Layer
+- Presentation
+
+### Data Layer
