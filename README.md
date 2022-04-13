@@ -2,9 +2,6 @@
 
 # Cookad App
 
- Features
-* Clean Architecture with MVI (Uni-directional data flow)
-
 
 Hi 👋🏼👋🏼👋🏼
 Thanks for checking out my project. For the rest of this document, I will be explaining the reasons for the technical decisions I made for this case study, the problems I faced, and what I learnt from them.
@@ -66,7 +63,7 @@ Then the recipe collection is be removed from the favorite list
 
 
 
-## Design and Thought Process
+## Design
 Before taking any coding and architecture decisions, I first  come up with an idea of how I wanted the app to look, and the kind of experience I wanted users to have when using the app. This also guided my decisions on what tools were best suited to bring about a good user experience. Some decisions required for the features were:
 - Two screens with functionality to navigate between themselves.
 - Layouts should be rendered in less than 60 frames per second which means leveraging on constraint layouts
@@ -89,9 +86,11 @@ The remote later relies on Retrofit library to fetch data from cookpad API.  The
 
 ### Cache Layer
 In android the could persist data in several ways;
-- shared preference: SharedPreferences is a key/value store where you can save a data under certain key. I made the desision not to store data with shared preference because it is made for store private primitive data types: booleans, floats, ints, longs, and strings, not arrays or complex objects
+- shared preference: SharedPreferences is a key/value store where you can save a data under certain key. I made the desision not to store data with shared preference because it is made for store private primitive data types: booleans, floats, ints, longs, and strings, not arrays or complex objects.
+- Room Database: This served as a single source of truth because it always provided consistent up-to-date and correct information of collections that were liked or not. Room is suitable for large data sets and I made use of `Type Converters` to convert arraylist of urls to a string.
 
 
+### Repository
 
 
 
