@@ -98,8 +98,9 @@ My repository was used to expose data to the rest of the application and also re
 <img src="https://developer.android.com/topic/libraries/architecture/images/final-architecture.png" width="40%" />
 
 
-Improvements
+Improvement
 - Rather than a generic response for an error,  the real cause should be provided to the user for example no network connectivity.
-- 
+- Paging Library should be used for pagination to allow the app use both network bandwidth and system resources more efficiently
+
 
 We have two data sources - `Remote` and `Cache`. Remote relies on Retrofit library to fetch data from the swapi.dev REST api, while the cache layer uses Room library to persist the search history.
