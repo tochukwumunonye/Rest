@@ -81,24 +81,28 @@ It enforces separation of concerns and dependency inversion, where higher and lo
 ### Data Layer
 The data layer contains application data and business logic. The business logic is what gives value to your app—it's made of real-world business rules that determine how application data must be created, stored, and changed.
 
-### Remote layer
+#### Remote layer
 The remote later relies on Retrofit library to fetch data from cookpad API.  The remote layer contains its own data class called collectionDTO which maps to different data classes within out application. Here I added` @Transient var isLiked: Boolean = false` to the enity class since I needed to monitor if a collection is liked or not.
 
-### Cache Layer
+#### Cache Layer
 In android the could persist data in several ways;
 - Shared preference: SharedPreferences is a key/value store where you can save a data under certain key. I made the desision not to store data with shared preference because it is made for store private primitive data types: booleans, floats, ints, longs, and strings, not arrays or complex objects.
 - Room Database: This served as a single source of truth because it always provided consistent up-to-date and correct information of collections that were liked or not. Room is suitable for large data sets and I made use of `Type Converters` to convert arraylist of urls to a string. I accessed the room database through a Data Access Object class.
 
 
-### Repository
+#### Repository
 My repository was used to expose data to the rest of the application and also reolving conflicts. Helped in Abstracting sources of data from the rest of the app.
 - It was responsible for fetching and inserting favourite images.
 - Made network calls for ne collection with the API
 - Provided both favorite and non favorite collections to the main screenn
 <img src="https://developer.android.com/topic/libraries/architecture/images/final-architecture.png" width="40%" />
 
+### Presentation
 
-Improvement
+
+
+
+## Improvement
 - Rather than a generic response for an error,  the real cause should be provided to the user for example no network connectivity.
 - Paging Library should be used for pagination to allow the app use both network bandwidth and system resources more efficiently
 
