@@ -4,10 +4,7 @@
 
  Features
 * Clean Architecture with MVI (Uni-directional data flow)
-* Kotlin Coroutines with Flow
-* Dagger Hilt
-* Kotlin Gradle DSL
-* GitHub actions for CI
+
 
 Hi 👋🏼👋🏼👋🏼Before taking any coding and architecture decisions, I first had to come up with an idea of how I wanted the app to look, and the kind of experience I wanted users to have when using the app. This also guided my decisions on what tools were best suited to bring about a good user experience. Some decisions required for the features were:
 Thanks for checking out my project. For the rest of this document, I will be explaining the reasons for the technical decisions I made for this case study, the problems I faced, and what I learnt from them.
@@ -17,7 +14,7 @@ Thanks for checking out my project. For the rest of this document, I will be exp
 - [Prerequisite](#prerequisite)
 - [Preview](#preview)
 - [Feature](#feature)
-- [Design](#Design)
+- [Design](#design and thought process)
 - [Architecture](#architecture)
 - [Testing](#testing)
 - [Recommendation](#Libraries)
@@ -37,7 +34,35 @@ Thanks for checking out my project. For the rest of this document, I will be exp
 ## Feature
 
 
-<img src="https://user-images.githubusercontent.com/61085272/163266341-2f38812d-eac4-4eb7-ab7f-def32cf06c01.png" width="33%" /> <img src="https://user-images.githubusercontent.com/61085272/163266329-b4709be1-033b-4c68-bb8c-e853f64378dd.png" width="33%" />
+#### Collections List Feature
+
+```
+In the recipe collection card
+When the user taps the favorite button
+Then collection is added to the favorite list
+And the favorite button icon indicates that the collection is a favorite
+```
+
+```
+In recipe collection card for a favorite collection
+When the user taps the favorite button
+Then collection is be removed from the favorite list
+And the favorite button icon indicates that this collection is not a favorite
+```
+
+#### Favorites List
+
+```
+When the user views their favorites
+Then a list of favorite collections is presented
+```
+
+```
+In the recipe collection card
+When the user taps the favorite button in the favorite list
+Then the recipe collection is be removed from the favorite list
+```
 
 
-## Design
+
+## Design and Thought Process
