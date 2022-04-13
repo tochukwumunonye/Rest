@@ -16,7 +16,7 @@ Thanks for checking out my project. For the rest of this document, I will be exp
 
 - [Prerequisite](#prerequisite)
 - [Preview](#preview)
-- [Feature](#Feature)
+- [Feature](#feature)
 - [Design](#Design)
 - [Architecture](#architecture)
 - [Testing](#testing)
@@ -28,6 +28,16 @@ Thanks for checking out my project. For the rest of this document, I will be exp
 - Gradle version 7.0.2
 - MinSdk 21
 - TargetSdk 31
+
+## Preview
+<img src="https://user-images.githubusercontent.com/61085272/163265305-f9ca1ec0-508b-43dc-8960-3978d9dceba6.png" width="33%" /> <img src="https://user-images.githubusercontent.com/61085272/163265317-7b8fc1e2-6d07-48e1-b70b-b6bada74487a.png" width="33%" /> 
+
+
+
+## Feature
+
+
+<img src="https://user-images.githubusercontent.com/61085272/163266341-2f38812d-eac4-4eb7-ab7f-def32cf06c01.png" width="33%" /> <img src="https://user-images.githubusercontent.com/61085272/163266329-b4709be1-033b-4c68-bb8c-e853f64378dd.png" width="33%" />
 
 
 ## Design
