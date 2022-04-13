@@ -98,8 +98,16 @@ My repository was used to expose data to the rest of the application and also re
 <img src="https://developer.android.com/topic/libraries/architecture/images/final-architecture.png" width="40%" />
 
 ### Presentation
+The UI/Presentation layer is the pipeline that converts application data changes to a form that the UI can present and then displays it. I used a  pattern where state of the application flows down and events flow up called Unidirectional data flow. Here the view model holds and exposes the state in an observable data holder called `Stateflow`. This ensures quick retoration of state after configuration changes. Alos the UI can react to any changes made in the state without having to manually pull data directly from the ViewModel.
+
+The UI notifies the ViewModel of user events.
+The ViewModel handles the user actions and updates the state.
+The updated state is fed back to the UI to render.
+The above is repeated for any event that causes a mutation of state.
 
 
+
+## Testing
 
 
 ## Improvement
