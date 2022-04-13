@@ -108,6 +108,9 @@ The above is repeated for any event that causes a mutation of state.
 
 
 ## Testing
+Testing is done with Junit4 testing framework for assertions and Mockito for mocking classes. Each  layer has its own test. 
+Viewmodel tests verify that each call to repository produces the correct view state.
+Repository Test verify each interaction with database or server returns the expected result.
 
 
 ## Improvement
@@ -115,4 +118,15 @@ The above is repeated for any event that causes a mutation of state.
 - Paging Library should be used for pagination to allow the app use both network bandwidth and system resources more efficiently
 
 
-We have two data sources - `Remote` and `Cache`. Remote relies on Retrofit library to fetch data from the swapi.dev REST api, while the cache layer uses Room library to persist the search history.
+## - Built With 🛠
+- [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
+- [Android Architecture Components](https://developer.android.com/topic/libraries/architecture) - Collection of libraries that help you design robust, testable, and maintainable apps.
+  - [StateFlows](https://developer.android.com/kotlin/flow) -  Flow APIs that enable flows to optimally emit state updates and emit values to multiple consumers.
+  - [Room](https://developer.android.com/topic/libraries/architecture/room) - SQLite object mapping library.
+  - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Stores UI-related data that isn't destroyed on UI changes. 
+  - [Room](https://developer.android.com/topic/libraries/architecture/room) - SQLite object mapping library.
+- [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
+- [OkHttp](http://square.github.io/okhttp/) - HTTP client that's efficient by default: HTTP/2 support allows all requests to the same host to share a socket
+- [Glide](https://github.com/bumptech/glide) - image loading framework for Android
+- [Gson](https://github.com/google/gson) - used to convert Java Objects into their JSON representation and vice versa.
+- [Mockito](http://site.mockito.org/) - Most popular mocking framework for Java/kotlin.
